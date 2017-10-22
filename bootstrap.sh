@@ -18,13 +18,11 @@ yum -y update
 #Install ElasticSearch and JDK
 yum install -y vim java-1.8.0-openjdk.x86_64 elasticsearch
 
-echo "Making sure Elastic-Search service starts automatically on system bootup"
 systemctl daemon-reload
 systemctl enable elasticsearch.service
 
 cp /vagrant/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 
-echo "Start Elastic-Search service"
 systemctl start elasticsearch.service
 service  elasticsearch status
 
