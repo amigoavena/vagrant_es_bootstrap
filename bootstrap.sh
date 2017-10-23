@@ -28,3 +28,5 @@ service  elasticsearch status
 
 #Open Firewall port
 firewall-cmd --zone=public --add-port=9200/tcp
+
+firewall-cmd --zone=public --add-port=9300/tcp
